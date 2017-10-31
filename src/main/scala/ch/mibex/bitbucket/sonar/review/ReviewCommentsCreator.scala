@@ -118,7 +118,7 @@ class ReviewCommentsCreator(bitbucketClient: BitbucketClient,
       issues.filter(_.isNew) foreach { i =>
         logger.debug(LogUtils.f(s"  - ${i.componentKey()}:${i.line()}: ${i.message()}"))
       }
-      logger.debug(LogUtils.f(s"And ${issuesOnChangedLines.size} of these are on changed or new lines:"))
+      logger.debug(LogUtils.f(s"And ${issuesOnChangedLines.size} of [ftan: testing] these are on changed or new lines:"))
       issuesOnChangedLines foreach { i =>
         logger.debug(LogUtils.f(s"  + ${i.componentKey()}:${i.line()}: ${i.message()}"))
       }
